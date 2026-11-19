@@ -22,7 +22,7 @@
 <body>
 <main>
   <h1>Basket Blitz</h1>
-  <p class="muted">Política de privacidad · Privacy policy — última actualización / last updated: 7 de noviembre de 2026 / November 7, 2026</p>
+  <p class="muted">Política de privacidad · Privacy policy — última actualización / last updated: 19 de noviembre de 2026 / November 19, 2026</p>
   <nav><a href="#es">Español</a><a href="#en">English</a></nav>
 
   <section id="es">
@@ -31,8 +31,30 @@
       («nosotros»). Esta política explica qué datos se tratan cuando juegas.</p>
 
     <h3>Lo que guarda el juego</h3>
-    <p>El juego no tiene cuentas ni servidores propios. Tu récord se guarda solo en tu teléfono y
-      no se envía a ningún sitio. Puedes borrarlo borrando los datos de la app.</p>
+    <p>Tu progreso (récords, estrellas, llaves, balones y pistas, retos y ajustes) se guarda en tu
+      teléfono. Puedes borrarlo borrando los datos de la app. Si usas Google Play Juegos, una copia
+      se guarda también en tu partida en la nube de Google Play Juegos, para recuperarla en otro
+      teléfono o al reinstalar (ver más abajo).</p>
+
+    <h3>Duelo (Google Firebase)</h3>
+    <p>En el modo Duelo juegas contra la partida grabada de otro jugador de tu nivel. Para que eso
+      funcione, cada vez que terminas una partida de Un minuto o de Duelo se guarda en nuestra base
+      de datos de Google Cloud Firestore (Firebase, servicio de Google):</p>
+    <ul>
+      <li>la grabación de la partida: dónde iba el balón, la altura del aro y los puntos en cada
+        momento, la puntuación final y la «semilla» de la partida;</li>
+      <li>un identificador anónimo de Firebase Authentication, creado por el juego sin pedirte
+        ningún dato, para saber qué partidas son tuyas;</li>
+      <li>un nombre de jugador generado al azar por el juego (por ejemplo «Lobo Veloz 83») y, si
+        has entrado en Google Play Juegos, tu nombre de jugador de Google Play Juegos;</li>
+      <li>el código de país de la configuración de idioma de tu teléfono (por ejemplo «ES»; no se
+        usa tu ubicación), el balón que llevas puesto, tu nivel en el juego y la fecha.</li>
+    </ul>
+    <p>Otros jugadores que jueguen un duelo contra tu partida ven tu nombre (el de Google Play
+      Juegos si lo hay, si no el generado), tu país, tu balón, tu nivel y la grabación de la
+      partida. No se guarda tu dirección de correo ni ningún otro dato de tu cuenta de Google.
+      Las partidas se conservan mientras exista el modo Duelo, para servir de rival. Si quieres
+      que borremos las tuyas, escríbenos indicando el nombre con el que aparecen.</p>
 
     <h3>Anuncios (Google AdMob)</h3>
     <p>El juego muestra anuncios de Google AdMob, por ejemplo el anuncio opcional para seguir
@@ -51,11 +73,12 @@
 
     <h3>Estadísticas de uso (Google Analytics para Firebase)</h3>
     <p>Para saber cómo se juega y mejorar el juego, la app manda a Google Analytics para
-      Firebase datos de uso: partidas que empiezas y terminas (modo, puntos y canastas), si ves el
+      Firebase datos de uso: partidas y duelos que empiezas y terminas (modo, puntos, canastas y
+      resultado del duelo), si ves el
       anuncio para seguir, si acabas o te saltas el tutorial, los balones que abres o eliges y
       las pantallas que visitas. Con ellos van un identificador de la instalación de la app, datos
       del dispositivo (modelo, versión de Android, idioma) y el país, deducido de la dirección IP.
-      No mandamos tu nombre ni tu perfil de Google Play Juegos.</p>
+      A Analytics no mandamos tu nombre ni tu perfil de Google Play Juegos.</p>
     <p>Si estás en el Espacio Económico Europeo, el Reino Unido o Suiza, estas estadísticas siguen
       lo que elijas en el mismo formulario de consentimiento de Google: si no lo aceptas, no se
       guarda ningún identificador en tu teléfono. Puedes cambiarlo cuando quieras desde
@@ -63,11 +86,13 @@
       14 meses. Más información: <a href="https://support.google.com/analytics/answer/11593727">Cómo
       trata Google Analytics los datos</a>.</p>
 
-    <h3>Clasificación y logros (Google Play Juegos)</h3>
+    <h3>Clasificación, logros y partida en la nube (Google Play Juegos)</h3>
     <p>Si usas Google Play Juegos, tu puntuación y tus logros se envían a Google Play Juegos
       asociados a tu perfil de jugador, para mostrarlos en la clasificación y en tu lista de
-      logros. Lo gestiona Google según su política de privacidad; puedes ver y borrar tu perfil
-      desde la app de Google Play Juegos.</p>
+      logros, y una copia de tu progreso se guarda en tu partida en la nube de Google Play Juegos.
+      El juego también lee tu nombre de jugador para mostrarlo en el modo Duelo (ver arriba). Lo
+      gestiona Google según su política de privacidad; puedes ver y borrar tu perfil y tus datos
+      de juego desde la app de Google Play Juegos.</p>
 
     <h3>Menores</h3>
     <p>El juego no está dirigido a menores de 13 años.</p>
@@ -85,8 +110,30 @@
       policy explains what data is processed when you play.</p>
 
     <h3>What the game stores</h3>
-    <p>The game has no accounts and no servers of its own. Your best score is stored only on your
-      phone and is not sent anywhere. You can delete it by clearing the app’s data.</p>
+    <p>Your progress (best scores, stars, keys, balls and courts, challenges and settings) is stored
+      on your phone. You can delete it by clearing the app’s data. If you use Google Play Games, a
+      copy is also kept in your Google Play Games cloud save, so you can get it back on another
+      phone or after reinstalling (see below).</p>
+
+    <h3>Duel (Google Firebase)</h3>
+    <p>In Duel mode you play against the recorded game of another player at your level. To make
+      this work, each time you finish a One Minute or Duel game it is stored in our Google Cloud
+      Firestore database (Firebase, a Google service):</p>
+    <ul>
+      <li>the recording of the game: where the ball was, the hoop height and the score at each
+        moment, the final score and the game’s “seed”;</li>
+      <li>an anonymous Firebase Authentication identifier, created by the game without asking you
+        for any data, to know which games are yours;</li>
+      <li>a player name randomly generated by the game (for example “Swift Wolf 83”) and, if you
+        are signed in to Google Play Games, your Google Play Games player name;</li>
+      <li>the country code from your phone’s language settings (for example “ES”; your location is
+        not used), the ball you have equipped, your level in the game and the date.</li>
+    </ul>
+    <p>Other players who play a duel against your game see your name (your Google Play Games name
+      if there is one, otherwise the generated one), your country, your ball, your level and the
+      recording of the game. Your email address and other Google account data are not stored.
+      Games are kept for as long as Duel mode exists, to serve as rivals. If you want us to delete
+      yours, write to us with the name they appear under.</p>
 
     <h3>Ads (Google AdMob)</h3>
     <p>The game shows ads from Google AdMob, such as the optional ad to keep playing with 10 more
@@ -103,11 +150,12 @@
 
     <h3>Usage statistics (Google Analytics for Firebase)</h3>
     <p>To understand how the game is played and improve it, the app sends usage data to Google
-      Analytics for Firebase: games you start and finish (mode, score and baskets), whether you
+      Analytics for Firebase: games and duels you start and finish (mode, score, baskets and duel
+      result), whether you
       watch the ad to keep playing, whether you finish or skip the tutorial, the balls you unlock
       or choose and the screens you visit. Along with it go an app-instance identifier, device
       information (model, Android version, language) and your country, derived from your IP
-      address. We do not send your name or your Google Play Games profile.</p>
+      address. We do not send your name or your Google Play Games profile to Analytics.</p>
     <p>If you are in the European Economic Area, the UK or Switzerland, these statistics follow
       your choice in the same Google consent form: if you do not accept, no identifier is stored on
       your phone. You can change it at any time from “Privacy options” on the start screen. Google
@@ -115,11 +163,13 @@
       <a href="https://support.google.com/analytics/answer/11593727">How Google Analytics handles
       data</a>.</p>
 
-    <h3>Leaderboard and achievements (Google Play Games)</h3>
+    <h3>Leaderboard, achievements and cloud save (Google Play Games)</h3>
     <p>If you use Google Play Games, your score and achievements are sent to Google Play Games,
-      linked to your player profile, to show them on the leaderboard and in your achievements list.
-      Google handles this data under its privacy policy; you can view and delete your profile from
-      the Google Play Games app.</p>
+      linked to your player profile, to show them on the leaderboard and in your achievements list,
+      and a copy of your progress is kept in your Google Play Games cloud save. The game also reads
+      your player name to show it in Duel mode (see above). Google handles this data under its
+      privacy policy; you can view and delete your profile and game data from the Google Play Games
+      app.</p>
 
     <h3>Children</h3>
     <p>The game is not directed at children under 13.</p>
